@@ -1,0 +1,64 @@
+.sm_gray_btn {
+    background: url('images/button_sm-gray.jpg') no-repeat center;
+    width: 68px;
+    height: 21px;
+    font-size:10px;
+    line-height: 21px;
+    text-align: center;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;  
+    cursor: pointer;  
+}
+
+/* link styles */
+.sm_wht {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+.sm_wht:hover {
+    text-decoration: underline;
+}
+
+.sm_red {
+    color: #CC0033;
+    font-size:10px;
+    line-height:13px;
+    text-decoration: none;
+}
+.sm_red:hover {
+    text-decoration: underline;
+}
+.sm_red:active {
+    text-decoration: none;
+}
+.sm_red:visited {
+    text-decoration: none;
+}
+
+/** image rotate styles */
+#fader {
+    position: relative; 
+    width: 776px;
+    height: 333px;
+}
+.img_control {
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+    position: absolute;
+    top: 285px;
+    cursor: pointer;
+}
+#next {
+    right: 20px;   
+}
+#prev {
+    left: 20px;  
+}
+
