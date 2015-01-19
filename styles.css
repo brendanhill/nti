@@ -18,6 +18,9 @@
 .sm_wht {
     color: #FFFFFF;
     text-decoration: none;
+    font-size:12px;
+    line-height:14px;
+    font-weight: bold;
 }
 .sm_wht:hover {
     text-decoration: underline;
@@ -36,6 +39,30 @@
     text-decoration: none;
 }
 .sm_red:visited {
+    text-decoration: none;
+}
+
+/* main nav bar */
+a.navbar {
+    font-family: Verdana;
+    color: #666666;
+    font-size:14px;
+    text-decoration: none;
+}
+a.navbar:visited {
+    color: #666666;
+    text-decoration: none;
+}
+a.navbar:hover {
+    color: #EA7116;
+    text-decoration: none;
+}
+a.navbar:active {
+    color: #0F1E5F;
+    text-decoration: none;
+}
+a.navbar.currentLink {
+    color: #0F1E5F;
     text-decoration: none;
 }
 
@@ -62,3 +89,17 @@
     left: 20px;  
 }
 
+/* text styles */
+.body_text {
+    font-size:12px;
+    line-height:13px;
+    color: #666666;
+}
+
+.sm_wht_chevron {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size:12px;
+    line-height:14px;
+    font-weight: bold;
+}

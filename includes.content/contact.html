@@ -1,0 +1,67 @@
+<script>
+    $("#main_nav-contact_btn").addClass("currentLink");
+</script>
+
+<style type="text/css">
+    BODY {font-family:"Arial"; font-size:14px;margin:0px;padding:0px;text-align:center;min-width:783px;}
+    P {font-family:"Arial"; font-size:14px;}
+    FORM {margin:0;padding:0;}
+    #centerwrapper {text-align:left;width:783px;margin-left:auto;margin-right:auto;}
+    .error {padding-left: 20px; color: #FF0000;}
+</style>
+
+<table cellspacing="0" style="border: 0px solid #000000; width:782px; padding-left: 10px; padding-top: 8px; margin-bottom: 20px; ">
+    <tr>
+        <td style="vertical-align:text-top; height: 80px;">
+            form information goes here
+        </td>
+    </tr>
+    <tr>
+        <td style="vertical-align:text-top; height:290px;">
+            <div id="contact_form">
+                <form name="contact" action="">
+                    <table cellspacing="0" cellpadding="0" border="0" style="width: 100%; height: 100%;">
+                        <tr>
+                            <td align="center" colspan="2" height="25px">
+                                <div id="response">
+                                    Thank you, your enquiry has been submitted.  We will be contacting you shortly.
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td valign="top" height="60px">
+                                <label for="name" id="name_label">Name</label><br />
+                                <input type="text" name="name" id="name" size="30" value="" class="text-input" /><br />
+                                <label class="error" for="name" id="name_error">This field is required.</label>
+                            </td>
+                            <td rowspan="3" valign="top" style="padding-left:20px;">
+                                <label for="message" id="message_label">Message</label><br />
+                                <textarea id="message" name="message" rows="9" cols="50"></textarea><br />
+                                <label class="error" for="message" id="message_error">This field is required.</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td valign="top" height="60px">
+                                <label for="email" id="email_label">Email</label><br />
+                                <input type="text" name="email" id="email" size="30" value="" class="text-input" /><br />
+                                <label class="error" for="email" id="email_error">This field is required.</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td valign="top" height="60px">
+                                <label for="enquiry" id="enquiry_label">Enquiry</label><br />
+                                <input type="text" name="enquiry" id="enquiry" size="30" value="" class="text-input" /><br />
+                                <label class="error" for="enquiry" id="enquiry_error">This field is required.</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="center" valign="bottom" colspan="2" height="35px">
+                                <input type="submit" name="submit" class="button" id="submit_contact" value="Send" />
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </div>  
+        </td>
+    </tr>
+</table>
