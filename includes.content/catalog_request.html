@@ -1,0 +1,120 @@
+<style type="text/css">
+    BODY {font-family:"Arial"; font-size:14;margin:0px;padding:0px;text-align:center;min-width:783px;}
+    P {font-family:"Arial"; font-size:14px;}
+    #centerwrapper {text-align:left;width:783px;margin-left:auto;margin-right:auto;}
+</style>
+
+<script>
+  $(function() {
+    $('.error').hide();
+    $("#submit_catalog_request").click(function() {
+        $('.error').hide();
+        
+  	    var name = $("input#name").val();
+  		    if (name == "") {
+            $("label#name_error").show();
+            $("span#error").show();
+            $("input#name").focus();
+            return false;
+        }
+        
+	    var email = $("input#email").val();
+      		if (email == "") {
+            $("label#email_error").show();
+            $("span#error").show();
+            $("input#email").focus();
+            return false;
+        }
+        
+        var phone = $("input#phone").val();
+      		if (phone == "") {
+            $("label#phone_error").show();
+            $("span#error").show();
+            $("input#phone").focus();
+            return false;
+        }
+        
+        var contactme = $("input#contactme").prop("checked")? "yes" : "no";
+        
+        var dataString = 'name='+ name + '&email=' + email + '&phone=' + phone + '&contactme=' + contactme;  
+        
+        $.ajax({
+            type: "POST",
+            url: "catalog_request_handler.php",
+            data: dataString,
+            success: function(data) {
+                $('#catalog_request').replaceWith(data);              
+            }
+        });
+        return false;
+    });
+});
+</script>  
+
+<table cellspacing="0" border="0" style="width:782px; padding-left: 7px; margin-bottom: 35px; margin-top: 12px;">
+    <tr>
+        <td style="vertical-align:text-top;">
+            <table cellpadding="0" cellspacing="0" style="width:100%; height:100%; border: 1px solid #CCCCCC; background-color: #FFFFFF;">
+                <tr>
+                    <td>
+                    <!-- BEGIN CONTENT AREA -->
+                    <table width="100%" cellspacing="0" cellpadding="0">
+                        <tr style="background-color: #3D4246;">
+                            <td colspan="2" style="padding-top: 3px; padding-bottom: 3px;">
+                                <img src="images/icon-dk_arrow-rt.jpg" style="vertical-align:middle; padding-left: 10px;" width="23" height="23" alt="" />
+                                <span class="header_bar">Request Our Catalog</span>
+                            </td>  
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px;">
+                                <span class="body_text">
+                                    <div id="catalog_request">
+                                    <p>Thank you for your interest in learning more about the Neurodiagnostic Technology program.  Please complete the following information and our catalog will be emailed to you.</p>
+                                        <form name="catalog_request" action="">
+                                        <table cellspacing="0" cellpadding="0" border="0" style="width: 100%; height: 100%;">
+                                            <tr>
+                                                <td valign="top" height="60px">
+                                                    <label for="name" id="name_label">Name</label><br />
+                                                    <input type="text" name="name" id="name" size="30" value="" class="text-input" /><br />
+                                                    <label class="error" for="name" id="name_error">This field is required.</label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td valign="top" height="60px">
+                                                    <label for="email" id="email_label">Email</label><br />
+                                                    <input type="text" name="email" id="email" size="30" value="" class="text-input" /><br />
+                                                    <label class="error" for="email" id="email_error">This field is required.</label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td valign="top" height="60px">
+                                                    <label for="phone" id="phone_label">Phone: (with area code)</label><br />
+                                                    <input type="text" name="phone" id="phone" size="30" value="" class="text-input" /><br />
+                                                    <label class="error" for="phone" id="phone_error">This field is required.</label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td valign="top" height="60px">
+                                                    <label for="contactme" id="contactme_label">I would like to know more.  Please contact me.</label><br />
+                                                    <input type="checkbox" name="contactme" id="contactme"/><br />
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="center" valign="bottom" height="35px">
+                                                    <input type="submit" name="submit" class="button" id="submit_catalog_request" value="Submit" />
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </form>
+                                    </div>
+                                </span>
+                            </td>
+                        </tr>
+                    </table>
+                    <!-- END CONTENT AREA -->
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>

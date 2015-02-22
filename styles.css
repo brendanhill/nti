@@ -42,6 +42,20 @@
     text-decoration: none;
 }
 
+.footer_links {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+.footer_links:hover {
+    text-decoration: underline;
+}
+.footer_links:active {
+    text-decoration: underline;
+}
+.footer_links:visited {
+    text-decoration: underline;
+}
+
 /* main nav bar */
 a.navbar {
     font-family: Verdana;
