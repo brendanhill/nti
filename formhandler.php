@@ -1,6 +1,6 @@
 <?php  
 $invalid = '';
-$my_email = 'beeman@steelnerv.com'; 
+$my_email = 'Info@MyNTIcareer.com'; 
 
 // Validate input:
 if(empty($_POST['name']) || empty($_POST['email']) || empty($_POST['message']) || empty($_POST['enquiry'])) {
