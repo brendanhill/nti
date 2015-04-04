@@ -1,6 +1,6 @@
 <?php  
 $invalid = '';
-$my_email = 'Info@MyNTIcareer.com';
+$my_email = 'Catalog@MyNTIcareer.com';
 
 // Validate input:
 if(empty($_POST['name']) || empty($_POST['email']) || empty($_POST['phone'])) {
@@ -33,7 +33,7 @@ if(empty($invalid)) {
     $headers .= "Reply-To: $email";
     mail($to, $subject, $body, $headers);  
     
-    echo "<p style='margin-bottom:214px;'>Thank you for requesting the Neurodiagnostic Technology Institute 2015 Catalog.  Please feel free to contact us at your convenience.  We welcome the opportunity to answer any questions you may have about beginning a new career as a Neurodiagnostic Technologist.<br><br>Thank you for requesting the Neurodiagnostic Technology Institute 2015 Catalog. You should receive it in your email shortly.  We welcome the opportunity to answer any questions you may have about beginning a new career as a Neurodiagnostic Technologist.</p>";
+    echo "<p style='margin-bottom:272px;'>Thank you for requesting the Neurodiagnostic Technology Institute 2015 Catalog. You should receive it in your email shortly.  We welcome the opportunity to answer any questions you may have about beginning a new career as a Neurodiagnostic Technologist.</p>";
 } else {
     echo "<p style='margin-bottom:302px;'>$invalid</p>";
 }
