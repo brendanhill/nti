@@ -1,10 +1,5 @@
-<style type="text/css">
-    BODY {font-family:"Arial"; font-size:14;margin:0px;padding:0px;text-align:center;min-width:783px;}
-    P {font-family:"Arial"; font-size:14px;}
-    #centerwrapper {text-align:left;width:783px;margin-left:auto;margin-right:auto;}
-</style>
-
-<script>
+<script type="text/javascript">
+/* <![CDATA[ */
   $(function() {
     $('.error').hide();
     $("#submit_catalog_request").click(function() {
@@ -36,7 +31,7 @@
         
         var contactme = $("input#contactme").prop("checked")? "yes" : "no";
         
-        var dataString = 'name='+ name + '&email=' + email + '&phone=' + phone + '&contactme=' + contactme;  
+        var dataString = "name="+ name + "&email=" + email + "&phone=" + phone + "&contactme=" + contactme;  
         
         $.ajax({
             type: "POST",
@@ -49,6 +44,7 @@
         return false;
     });
 });
+/* ]]> */
 </script>  
 
 <table cellspacing="0" border="0" style="width:782px; padding-left: 7px; margin-bottom: 35px; margin-top: 12px;">
@@ -67,9 +63,8 @@
                         </tr>
                         <tr>
                             <td style="padding: 10px;">
-                                <span class="body_text">
-                                    <div id="catalog_request">
-                                    <p>Thank you for your interest in learning more about the Neurodiagnostic Technology program.  Please complete the following information and our catalog will be emailed to you.</p>
+                                <div id="catalog_request">
+                                    <p class="body_text">Thank you for your interest in learning more about the Neurodiagnostic Technology program.  Please complete the following information and our catalog will be emailed to you.</p>
                                         <form name="catalog_request" action="">
                                         <table cellspacing="0" cellpadding="0" border="0" style="width: 100%; height: 100%;">
                                             <tr>
@@ -106,8 +101,7 @@
                                             </tr>
                                         </table>
                                     </form>
-                                    </div>
-                                </span>
+                                </div>
                             </td>
                         </tr>
                     </table>
