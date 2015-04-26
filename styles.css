@@ -1,3 +1,19 @@
+.sm_gray_btn {
+    background: url('images/button_sm-gray.jpg') no-repeat center;
+    width: 68px;
+    height: 21px;
+    font-size:10px;
+    line-height: 21px;
+    text-align: center;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;  
+    cursor: pointer;  
+}
+
 /* link styles */
 .sm_wht {
     color: #FFFFFF;
