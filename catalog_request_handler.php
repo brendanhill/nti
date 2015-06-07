@@ -29,7 +29,8 @@ if(empty($invalid)) {
         "Phone: $phone\n " .
         "Please contact me: $contactme";
         
-    $headers = "From: $email\n";
+    //$headers = "From: $email\n";
+    $headers = "From: catalog@neurodiagnostictechnologyinstitute.com\n";
     $headers .= "Reply-To: $email";
     mail($to, $subject, $body, $headers);  
     

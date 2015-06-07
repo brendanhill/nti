@@ -29,7 +29,8 @@ if(empty($invalid)) {
         "Enquiry Type: $enquiry\n " .
         "Message:\n $message";
         
-    $headers = "From: $email\n";
+    //$headers = "From: $email\n";
+    $headers = "From: contact@neurodiagnostictechnologyinstitute.com\n";
     $headers .= "Reply-To: $email";
     mail($to, $subject, $body, $headers);  
 }
